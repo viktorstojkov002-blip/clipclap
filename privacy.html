@@ -17,7 +17,7 @@
   <main>
     <div class="wrap">
       <h1>Privacy Policy</h1>
-      <p class="muted">Last updated: November 13, 2026</p>
+      <p class="muted">Last updated: November 20, 2026</p>
 
       <p>ClipClap is a personal desktop app for Windows, made and used by the owner of the ClipClap YouTube channel
         ("we", "us"). This policy explains what data ClipClap uses, why, and how you can remove it.</p>
@@ -34,22 +34,24 @@
       <p>When you click "Connect YouTube", Google asks you to allow ClipClap to:</p>
       <ul>
         <li><strong>Manage your YouTube videos</strong> (scope <code>youtube.upload</code>): used only to upload the clips you approve, with the title, description and tags you reviewed.</li>
-        <li><strong>View your YouTube account</strong> (scope <code>youtube.readonly</code>): used only to read your channel's name and ID, so the app can show which channel is connected.</li>
+        <li><strong>View your YouTube account</strong> (scope <code>youtube.readonly</code>): used only to read your channel's name and ID, so the app can show which channel is connected, and the view, like and comment counts of the videos you uploaded with ClipClap.</li>
+        <li><strong>View YouTube Analytics reports for your YouTube content</strong> (scope <code>yt-analytics.readonly</code>): used only to show you, in ClipClap's Results view, how the videos you uploaded with ClipClap are doing: views, engaged views, watch time, average percentage viewed, likes, shares and subscribers gained.</li>
       </ul>
-      <p>ClipClap does not read, change or delete any of your other videos, comments, playlists, subscriptions or analytics.</p>
+      <p>ClipClap does not change or delete any of your videos, comments, playlists or subscriptions, and it only reads statistics and analytics for the videos it uploaded.</p>
 
       <h2>What is stored, and where</h2>
       <ul>
         <li><strong>Sign-in token:</strong> the access token Google gives ClipClap is saved in a file on your own computer only. It is never sent to us or to anyone else.</li>
         <li><strong>Channel name and ID:</strong> kept in memory while the app is open, only to show which channel is connected.</li>
         <li><strong>Uploaded video IDs:</strong> after an upload, the new video's ID and link are saved on your computer, next to the clip, so the app can show that it was uploaded.</li>
+        <li><strong>Your clips' statistics:</strong> the numbers listed above for each video uploaded with ClipClap are stored in a file on your computer only. ClipClap refreshes them every few hours while it is open, which also confirms with Google, at least every 30 days, that you still allow ClipClap to read them. They are shown only to you.</li>
         <li><strong>Your clips:</strong> the stream recordings, transcripts and clips ClipClap makes are stored on your computer.</li>
       </ul>
       <p>We do not run servers that collect your data, we do not use cookies or tracking, and we do not collect information about your device.</p>
 
       <h2>How your data is used and shared</h2>
-      <p>Your YouTube data is used only to upload your approved clips to your own channel and to show which channel is connected.
-        It is not sold, shared with third parties, or used for advertising.</p>
+      <p>Your YouTube data is used only to upload your approved clips to your own channel, to show which channel is connected,
+        and to show you how your own uploaded clips are doing. It is not sold, shared with third parties, sent to any AI service, or used for advertising.</p>
       <p>To suggest moments and write titles, ClipClap sends the text transcript of a stream (not your Google or YouTube data)
         to Anthropic's Claude API. Anthropic's handling of that data is described in its
         <a href="https://www.anthropic.com/legal/privacy">Privacy Policy</a>.</p>
@@ -57,8 +59,9 @@
       <h2>How to revoke access and delete your data</h2>
       <ul>
         <li><strong>Revoke access:</strong> at any time, open the <a href="https://security.google.com/settings/security/permissions">Google security settings page</a>, choose ClipClap (listed under the name of its Google project), and remove its access.</li>
-        <li><strong>Disconnect in the app:</strong> clicking "disconnect" in ClipClap deletes the saved sign-in token from your computer immediately.</li>
-        <li><strong>Delete everything:</strong> deleting ClipClap's folder removes all data it stored. Data from YouTube API Services that ClipClap keeps (the channel name and uploaded video IDs) is never kept longer than 30 days without being refreshed, and is deleted when you disconnect or delete the app.</li>
+        <li><strong>Disconnect in the app:</strong> clicking "disconnect" in ClipClap revokes its access with Google and immediately deletes the saved sign-in token and all the YouTube statistics it stored from your computer.</li>
+        <li><strong>If you revoke access in your Google account</strong> instead, ClipClap can no longer refresh the statistics and deletes them within 30 days (the next time it runs after that).</li>
+        <li><strong>Delete everything:</strong> deleting ClipClap's folder removes all data it stored. Data from YouTube API Services that ClipClap keeps (the channel name, uploaded video IDs and your clips' statistics) is never kept longer than 30 days without being refreshed, and is deleted when you disconnect or delete the app.</li>
         <li>You can also email us at the address below to ask about or delete your data.</li>
       </ul>
 
